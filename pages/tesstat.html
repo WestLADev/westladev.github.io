@@ -146,6 +146,7 @@
         <div class="row">
           <div class="description text-center">
             <p>Click to redirect to the sample site</p>
+            <p align=center style='text-align:center'><a href="https://tesstats.westla.dev"><img width=468 height=272 src="../assets/img/tesstats.png"></a></p>
             <p><a href="https://tesstats.westla.dev">https://tesstats.westla.dev</a></p>
             <p>I had quite the adventure making this little app. Originally i just didn't feel like paying for a trakcing/history app and figured i'd write it myself </p>
             <p> also my roommates kinda wanted me to deduct my charging costs reliably from monthly electric bills. (yes HCOL means even tesla drivers have rooommates) </p>
@@ -156,7 +157,7 @@
             <p>but as of 9/15 or somewhere thereabouts it stopped working because tesla started blocking cloud providers, they probably want to profit on this themselves  </p>
             <p>so i modified my little daemon to go from 2 min to 1 min constant polling (for better granularity) and now no tokens or any data is stored, everything just pulls from the DB, gets credentials/etc and then does the api calls all lcoally then writes it all back to azure sql DB  </p>
             <p> this decoupling makes it much easier to move around the tracking daemon in the future </p>
-  
+            
           </div>
         </div>
       </div>
