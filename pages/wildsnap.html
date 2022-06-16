@@ -144,7 +144,7 @@
     <div class="section">
       <div class="container">
         <div>
-            <h2>What is <a href="https://gabrielhall2112.github.io"><u>WildSnap</u></a>?</h2><br>
+            <h2>What is <a href="https://wildsnap.westla.dev"><u>WildSnap</u></a>?</h2><br>
 
             <p><b><u>TLDR:</u></b> A personal gallery to showcase my mediocre photography of the plants and animals i find in my local area and on my travels.</p>
             
@@ -174,8 +174,8 @@
                 <p>I showed my coworkers, we all thought it was neat and that was the end of it. But a few weeks later i realized I missed some flowers and wildlife and couldn't resist improving this little project further. 
                     <ul>
                         <li> I started expanding the JSON with more data. </li>
-                        <li>I realized the color scheme sholid probably be improved.</li>
-                        <li>I also realized some plants and creatures are seasonal and I colid add a few older ones from my phone. </li>
+                        <li>I realized the color scheme should probably be improved.</li>
+                        <li>I also realized some plants and creatures are seasonal and I colid add a few older ones from my phone galleries. </li>
                         <li>Then I thought, I should probably rate the quality of these pictures so i can filter out the less impressive ones when I want to show off. </li>
                         <li>Then the number off "snaps" as i had begun to call them was so numerous I felt the need to asychronously load them onto the page.</li>
                         <li>Adding to the JSON manually was tedious, so i added a menu item for uploading new requests (but haven't connected it to anything yet)</li>
@@ -187,6 +187,44 @@
              </tr>
             </table>
 
+            <hr class="dashed">
+
+            <h2>Update - June 2022</h2>
+            <p>Updating the JSON containing all the data for the site then redeploying the whole site is fine when its infrequent changes and merely meant for display. However i wanted to be able to manipulate the data through the frontend. But that means a real database, real user security, an API, and lots of other bits and bobs to connect it all together. Luckily Amazon Amplify provides most of that for me.</p>
+            <p>Understanding the page life cycle was the hardest part considering i'm not a UI programmer. Implementing the authentication and authorization was a nightmare because I didn't even fully understand when any given data i needed was available. After banging my head against the wall for a few hours I went back to basics and put console.log(text) practically everywhere with the state/props and suddenly all was clear. This hardship had way more to do with my inexperience with UI than with AWS resources.</p>
+            <p>Rather than explaining the agonizing troubleshooting and days of expirementing, I've made a visio document showing the conversion in architecture. </p>
+            <br>
+
+            <div class="card card-nav-tabs card-plain">
+              <div class="card-header card-header-primary">
+                <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                <div class="nav-tabs-navigation">
+                  <div class="nav-tabs-wrapper">
+                    <ul class="nav nav-tabs" data-tabs="tabs">
+                      <li class="nav-item">
+                        <a class="nav-link active" href="#before" data-toggle="tab">BEFORE</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#after" data-toggle="tab">AFTER</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body ">
+                <div class="tab-content text-center">
+                  <div class="tab-pane active" id="before">
+                    <img src="../assets/img/ws/arch1.png">
+                  </div>
+                  <div class="tab-pane" id="after">
+                    <img src="../assets/img/ws/arch2.png">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <p>The best part of switching over to AWS was that now i could use the Github Free hosting instead of paying my current web host for my main site. Saved a cool $10 a month. Oh joy. I'm pretty sure that doesn't even cover a Netflix subscription these days.</p>
+            <p>Even after all these advances, there is still lots to do - image uploading to S3, linking coordinates to google maps, and individualized user uploads.</p>
         </div>
       </div>
     </div>
