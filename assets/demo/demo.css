@@ -888,3 +888,7 @@
 .flash {
   animation-name: flash;
 }
+
+.strikethrough{
+  text-decoration: line-through;
+}

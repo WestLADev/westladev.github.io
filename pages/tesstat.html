@@ -57,9 +57,9 @@
               <a href="./azure.html" class="dropdown-item">
                 <i class="material-icons">cloud</i> Azure Consulting
               </a>
-              <a href="./mastodon.html" class="dropdown-item">
-                <i class="material-icons">connect_without_contact</i> Mastodon
-              </a>
+              <div class="dropdown-item">
+                <i class="material-icons">connect_without_contact</i> <div class="strikethrough">Mastodon</div>
+              </div>
             </div>
           </li>
 
@@ -142,50 +142,90 @@
   <!-- MAIN CONTENT -->
   <div class="main main-raised">
     <div class="section">
-      <div class="container text-center">
+      <div class="container ">
         <div class="row">
-          <div class="description text-center">
-            <p>Click to redirect to the sample site</p>
-            <p align=center style='text-align:center'><a href="https://tesstats.westla.dev"><img width=468 height=272 src="../assets/img/tesstats.png"></a></p>
-            <p><a href="https://tesstats.westla.dev">https://tesstats.westla.dev</a></p>
-            <p>I had quite the adventure making this little app. Originally i just didn't feel like paying for a trakcing/history app and figured i'd write it myself </p>
-            <p> also my roommates kinda wanted me to deduct my charging costs reliably from monthly electric bills. (yes HCOL means even tesla drivers have rooommates) </p>
-            <p> i thought this would also be a great oppurtunity to test out making a blazor app becauswe i was impressed by what i saw at 2019 MS Ignite</p>
-            <p> i got to learn more about Rest APIs and proper authentication, linux/cron/test out powershell core and their quirks </p>
-            <p>started out to test out raspbian and learn some linux instead of running this on my home pc. i ended up learning cron and getting powershell core and sql libraries workingn on my little device </p>
-            <p>then to practice my cloud skills i moved this process to a VM in azure </p>
-            <p>but as of 9/15 or somewhere thereabouts it stopped working because tesla started blocking cloud providers, they probably want to profit on this themselves  </p>
-            <p>so i modified my little daemon to go from 2 min to 1 min constant polling (for better granularity) and now no tokens or any data is stored, everything just pulls from the DB, gets credentials/etc and then does the api calls all lcoally then writes it all back to azure sql DB  </p>
-            <p> this decoupling makes it much easier to move around the tracking daemon in the future </p>
+          <div class="description">
+            <p>Click to redirect to the sample site:</p>
+            <div class="strikethrough"><p><a href="https://tesstats.westla.dev">https://tesstats.westla.dev</a></p></div>
             
+               <!--         carousel  -->
+                <div class="section" id="carousel">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12 mr-auto ml-auto">
+                        <!-- Carousel Card -->
+                        <div class="card card-raised card-carousel">
+                          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img class="d-block w-100" src="../assets/img/tesla/tes1.png" alt="First slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h4>
+                                    <i class="material-icons">location_on</i>
+                                    Yellowstone National Park, United States
+                                  </h4>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="../assets/img/tesla/tes2.png" alt="Second slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h4>
+                                    <i class="material-icons">location_on</i>
+                                    Somewhere Beyond, United States
+                                  </h4>
+                                </div>
+                              </div>
+                              <div class="carousel-item">
+                                <img class="d-block w-100" src="../assets/img/tesla/tes3.png" alt="Third slide">
+                                <div class="carousel-caption d-none d-md-block">
+                                  <h4>
+                                    <i class="material-icons">location_on</i>
+                                    Yellowstone National Park, United States
+                                  </h4>
+                                </div>
+                              </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <i class="material-icons">keyboard_arrow_left</i>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <i class="material-icons">keyboard_arrow_right</i>
+                              <span class="sr-only">Next</span>
+                            </a>
+                          </div>
+                        </div>
+                        <!-- End Carousel Card -->
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        <!--         end carousel -->
+            
+            <p>I had quite the adventure making this little app. Originally i just didn't feel like paying for any of the number of trakcing/history apps and figured i'd write it myself </p>
+            <p> Also my roommates kinda wanted me to deduct my charging costs reliably from monthly electric bills. (yes HCOL means even tesla drivers have rooommates) </p>
+            <p> I thought this would also be a great oppurtunity to test out making a blazor app becauswe i was impressed by what i saw at 2019 MS Ignite</p>
+            <p> I got to learn more about Rest APIs and proper authentication, linux/cron/test out powershell core and their quirks </p>
+            <p> This whole thing started out to test out raspbian and learn some linux instead of running this on my home pc. I ended up learning cron and getting powershell core and sql libraries workingn on my little device </p>
+            <p>Then to practice my cloud skills i moved this process to a VM in azure </p>
+            <p>but as of 9/15/2021 or somewhere thereabouts it stopped working because tesla started blocking cloud providers, they probably want to profit on this kind of thing themselves  </p>
+            <p>So i modified my little daemon to go from 2 min to 1 min constant polling (for better granularity) and now no tokens or any data is stored, everything just pulls from the DB, gets credentials/etc and then does the api calls all locally at my house then writes it all back to azure sql DB  </p>
+            <p> This decoupling makes it much easier to move around the tracking daemon in the future </p>
+  
+            <h3>UPDATE 8/5/2022</h2>
+            <p> My lease has ended and instead of buying another Tesla right away I'm going to go back to motorcycles for a little while. This was the greatest car I've ever owned and I'll be getting another shortly, especially since the tax EV tax credit has returned </p>
+            <p>Meanwhile this app is no longer needed. I'll add some photos of the little web app for posterity and shut off the Azure resources. It was fun while it lasted</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Classic Modal -->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <i class="material-icons">clear</i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
-          </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-link">Nice Button</button>
-          <button type="button" class="btn btn-danger btn-link" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--  End Modal -->
   
   <footer class="footer footer-default">
     <div class="container">
@@ -199,11 +239,6 @@
           <li>
             <a href="./blog.html">
               Blog
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Licenses
             </a>
           </li>
         </ul>

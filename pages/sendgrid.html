@@ -57,9 +57,9 @@
               <a href="./azure.html" class="dropdown-item">
                 <i class="material-icons">cloud</i> Azure Consulting
               </a>
-              <a href="./mastodon.html" class="dropdown-item">
-                <i class="material-icons">connect_without_contact</i> Mastodon
-              </a>
+              <div class="dropdown-item">
+                <i class="material-icons">connect_without_contact</i> <div class="strikethrough">Mastodon</div>
+              </div>
             </div>
           </li>
 
@@ -144,9 +144,20 @@
     <div class="section">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 mx-auto text-center">
+          <div class="col-md-8 mx-auto">
             <!--<h2>Landing</h2>-->
-            <h4>Page under construction.</h4>
+            <h4><a href="https://sendgrid.com/"><u>SendGrid</u></a> is pretty great. With just a few clicks you can essentially create an SMTP email sending server as a service. 
+              <br><br>As great as that is, my work requirements demanded the need for send history, resending emails, and read receipts. Luckily SendGrid has all of this but doesn't keep the history forever. Further, it isn't in the most usable format for data analytics.
+              <br><br>Thats where some other really great Azure services come in handy. 
+              <br><br><ul>
+                <li>First I set up a SQL Server DB as a mail queue. This contains both the emails, their send variables, and attachments. </li>
+                <li>Second I set up a powershell script run by a SQL Agent to send the messages via sendgrid</li>
+                <li>Third I created an Azure Function as a listener for events that SendGrid fires off. Whenever I get one of these events I write it back to the SQL server in a history table.</li>
+                <li>I'd like to add a UI on top that has single click resending options and even the ability to edit emails waiting in the queue that will send on a future date.</li>
+                <li>It would also be nice to have a toggle switch to hold back and then later release emails to be sent after review by a Business Analyst</li>
+              </ul>              
+              <br>I created this to make troubleshooting emails easier. It ended up becoming one of my most valuable tools. Too often business users would ask why they didn't get some particular email or why someone wasn't CC'd. With this, not only did I now have a complete history, I could get the exact return from the receiving server in the case that the email was actually rejected. This actually led to me adding all sorts of email domain verification to prevent getting rejected by spam filters. But thats another story.   
+            </h4>
           </div>
         </div>
       </div>
@@ -188,11 +199,6 @@
           <li>
             <a href="./blog.html">
               Blog
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Licenses
             </a>
           </li>
         </ul>
