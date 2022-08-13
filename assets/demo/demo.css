@@ -892,3 +892,28 @@
 .strikethrough{
   text-decoration: line-through;
 }
+
+/* BEGIN LOOPER */
+.outer {
+  overflow: hidden;
+}
+
+.outer div {
+  display: inline-block;
+}
+
+.loop {
+  white-space: nowrap;
+  animation: loop-anim 20s linear infinite;
+}
+
+@keyframes loop-anim {
+  0% {
+      margin-left: 0;
+  }
+  100% {
+      margin-left: -50% /* This works because of the div between "outer" and "loop" */
+  }
+}
+
+/* END LOOPER */

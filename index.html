@@ -32,7 +32,12 @@ The above copyright notice and this permission notice shall be included in all c
   <link href="./assets/demo/demo.css" rel="stylesheet" />
 </head>
 
+
+
 <body class="index-page sidebar-collapse">
+
+  <!--  HEADER BAR  -->
+
   <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
@@ -67,12 +72,15 @@ The above copyright notice and this permission notice shall be included in all c
               <i class="material-icons">apps</i> Services
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="./pages/azure.html" class="dropdown-item">
-                <i class="material-icons">cloud</i> Azure Consulting
+              <a href="./pages/cloud.html" class="dropdown-item">
+                <i class="material-icons">cloud</i> Cloud Services
               </a>
-              <div class="dropdown-item">
-                <i class="material-icons">connect_without_contact</i> <div class="strikethrough">Mastodon</div>
-              </div>
+              <a href="./pages/bi.html" class="dropdown-item">
+                <i class="material-icons">light</i> Business Intelligence
+              </a>
+              <a href="./pages/integration.html" class="dropdown-item">
+                <i class="material-icons">memory</i> Systems Integration
+              </a>
             </div>
           </li>
 
@@ -81,11 +89,10 @@ The above copyright notice and this permission notice shall be included in all c
               <i class="material-icons">science</i> Projects
             </a>
             <div class="dropdown-menu dropdown-with-icons">
-              <a href="./pages/tesstat.html" class="dropdown-item">
-                <i class="material-icons">drive_eta</i> Tesla Tracking
-              </a>
-              <a href="./pages/ucrp.html" class="dropdown-item">
-                <i class="material-icons">attach_money</i> Retirement Calculator
+              <a href="./pages/wildsnap.html" class="dropdown-item">
+                <i class="material-icons">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path fill="#333333" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4C7.92,4 4.55,7.05 4.06,11H8.13C8.57,9.27 10.14,8 12,8C13.86,8 15.43,9.27 15.87,11H19.94C19.45,7.05 16.08,4 12,4M12,20C16.08,20 19.45,16.95 19.94,13H15.87C15.43,14.73 13.86,16 12,16C10.14,16 8.57,14.73 8.13,13H4.06C4.55,16.95 7.92,20 12,20M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z"></path></svg>  
+                </i> Wild Snap
               </a>
               <a href="./pages/raspberrypi.html" class="dropdown-item">
                 <i class="material-icons">memory</i> RaspberryPi
@@ -93,11 +100,18 @@ The above copyright notice and this permission notice shall be included in all c
               <a href="./pages/kanjiji.html" class="dropdown-item">
                 <i class="material-icons">translate</i> Kanjiji
               </a>
-              <a href="./pages/wildsnap.html" class="dropdown-item">
-                <i class="material-icons">
-                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><path fill="#333333" d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4C7.92,4 4.55,7.05 4.06,11H8.13C8.57,9.27 10.14,8 12,8C13.86,8 15.43,9.27 15.87,11H19.94C19.45,7.05 16.08,4 12,4M12,20C16.08,20 19.45,16.95 19.94,13H15.87C15.43,14.73 13.86,16 12,16C10.14,16 8.57,14.73 8.13,13H4.06C4.55,16.95 7.92,20 12,20M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z"></path></svg>  
-                </i> Wild Snap
+              <a href="./pages/tesstat.html" class="dropdown-item">
+                <i class="material-icons">drive_eta</i> Tesla Tracking
               </a>
+              <a href="./pages/ucrp.html" class="dropdown-item">
+                <i class="material-icons">attach_money</i> Retirement Calculator
+              </a>
+              <div class="dropdown-item">
+                <i class="material-icons">connect_without_contact</i> <div class="strikethrough">Mastodon</div>
+              </div>
+              <div class="dropdown-item">
+                <i class="material-icons">mail</i> <div class="strikethrough">ClassicMail</div>
+              </div>
             </div>
           </li>
 
@@ -144,13 +158,13 @@ The above copyright notice and this permission notice shall be included in all c
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto">
           <div class="brand">
-            <h1>Local Innovation</h1>
-            <h3>Business Intelligence Solutions</br>
-                Data Integration</br>
-                Web Applications</br>
-                Cloud Migration</br>
-                In-person Consultations</br>
-                Pet Projects</h3>
+            <h1>West LA Dev</h1>
+            <h2>Local Innovation</h2>
+            <h4>Pet Projects</br>
+              The Cloud</br>
+              Data Analytics</br>
+                Web Applications
+                </h4>
           </div>
         </div>
       </div>
@@ -158,29 +172,74 @@ The above copyright notice and this permission notice shall be included in all c
   </div>
   <div class="main main-raised">
     
-    <div class="section">
-      <div class="container text-center">
+<!--  LINKS SECTION  -->
+<div class="section">
+  <div class="container">
+    <!--                 images -->
+    <div id="images">
+      <div class="row">
+        
+          <div class="col-sm-2">
+            <a href="./pages/me.html"><u><h4>Profile</h4></u></a>
+            <a href="./pages/me.html"><img src="./assets/img/gmh_r.png" class="img-raised rounded img-fluid"></a>
+            <br><br>A detailed look at who I am and what I do.
+          </div>
+        
+        <div class="col-sm-2 ml-auto">
+          <a href="./pages/cloud.html"><u><h4>Cloud Services</h4></u></a>
+            <a href="./pages/cloud.html"><img src="./assets/logo/cloud.png" class="img-raised rounded img-fluid"></a>
+            <br><br>Stop buying expensive servers!<br>SAAS is the king of scalability
+        </div>
+
+        <div class="col-sm-2 ml-auto">
+          <a href="./pages/bi.html"><u><h4>Business Intelligence</h4></u></a>
+          <a href="./pages/bi.html"><img src="./assets/logo/charts.png" class="img-raised rounded img-fluid"></a>
+          <br><br>Understanding your business top down with Data Analytics
+        </div>
+
+        <div class="col-sm-2 ml-auto">
+          <a href="./pages/integration.html"><u><h4>Systems Integration</h4></u></a>
+            <a href="./pages/integration.html"><img src="./assets/logo/flow.png" class="img-raised rounded img-fluid"></a>
+            <br><br>Your systems must talk to each other before they can work together
+        </div>
+      </div>
+    </div>
+    <!--                 end images	             -->
+    
+    
+  </div>
+</div>
+
+    <!--  INTRO SECTION  -->
+    <div class="section section-tabs">
+      <div class="container">
         <div class="row">
-          <div class="col-md-8 mx-auto text-center">
+          <div class="mx-auto">
             <!--<h2>Landing</h2>-->
-            <h4><p>WestLA Dev is my landing page for all my programming projects, career achievements, blog posts, and anything else that catches my interest. For business inquiries or consulting questions email me directly at gabriel@westla.dev. </p>
-              <p>On occasion i'll do contract work or freely give technology architecture advice. Although currently full time work consumes most of my time, I love problem solving and exploring new tools.
-              </p>
-            <p>Unfortunately most of my work is behind NDAs and secrecy.</p>
+            <h4>WestLA Dev is my all pupose landing page for all my programming projects, career achievements, blog posts, and anything else that catches my interest. I even have a few subdomains that forward to cloud services. For example, I have an email relay to route emails at this domain to the provider of my choosing.
+              <br><br>Between projects i like to do contract work or consult on technology architecture. Although currently full time work consumes most of my time, I love problem solving and exploring new tools.
+              <br><br>Unfortunately most of my work is behind NDAs and proprietary secrecy. Does this mean I need to contribute to the open source community if I ever want my Github profile to look impressive? I hope to add more public projects soon.
+              <br><br><b>For business inquiries or consulting questions email me directly at <u><a href="mailto:gabriel@westla.dev">gabriel@westla.dev</a></u></b>
             </h4>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="section section-tabs">
+    
+
+    <!--  GUARANTEE SECTION  -->
+    <div class="section">
       <div class="container">
         <!--                nav tabs	             -->
         <div id="nav-tabs">
-          <h3>Guarantees</h3>
+          
           <div class="row">
-            <div class="col-md-6 ">
-              <h3><small>Local Innovation</small></h3>
+            <div class="col-md-12">
+              <div class="text-center">
+                <h3>Local Innovation Guarantee</h3>
+                <br>
+              </div>
               <!-- Tabs with icons on Card -->
               <div class="card card-nav-tabs">
                 <div class="card-header card-header-primary">
@@ -211,15 +270,37 @@ The above copyright notice and this permission notice shall be included in all c
                   </div>
                 </div>
                 <div class="card-body ">
-                  <div class="tab-content text-center">
+                  <div class="tab-content">
                     <div class="tab-pane active" id="profile">
-                      <p> I will be there in person. No overseas, no outsourcing, no subcontracting. All the work I sign up for I do on the spot. </p>
+                      <h4>
+                      <br>I do my best work in person. 
+                        <br>
+                        <br>A hands on approach with face to face communications leaves little room for misinterpretation. 
+                        <br>No overseas, no outsourcing, no subcontracting. 
+                        <br>
+                        <br>All the work I sign up for I do myself to ensure quality and to best support that work later. 
+                      </h4>  
                     </div>
                     <div class="tab-pane" id="messages">
-                      <p> No special H1B requirements, no domestic spying, no strange timezones. Everything is hosted locally or in Microsoft Azure servers on the west coast.</p>
+                      <h4>
+                        <br>No special H1B requirements, no domestic spying, no strange timezones.
+                        <br>
+                        <br>Everything is hosted locally on site or on your servers. 
+                        <br>Alternatively you can host on the West coast in Microsoft Azure or Amazon Web Services.
+                        <br>
+                        <br>Support your local community, support your domestic economy.
+                      </h4>  
                     </div>
                     <div class="tab-pane" id="settings">
-                      <p>I will personally see to it that if there is any satisfaction, the fix will be free of charge.</p>
+                      <h4>
+                        <br>Warranty Policy
+                        <br>
+                        <br>Any faults in code or functionality that surface within a year will be fixed free of charge.
+                        <br>Some errors are the natural result of evolving compatibility as technologies continue to change.
+                        <br>
+                        <br>Help/training on functionality is also separately available. 
+                      </h4>  
+                      
                     </div>
                   </div>
                 </div>
@@ -233,76 +314,43 @@ The above copyright notice and this permission notice shall be included in all c
     </div>
     <!-- 	            end nav tabs -->
 
-    <div class="section">
-      <div class="container tim-container">
-        <!--                 images -->
-        <div id="images">
-          <div class="title">
-            <h2>The Stack</h2>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-sm-2">
-              <h4>Jenkins (CI)</h4>
-              <img src="./assets/logo/jenk.png" alt="Rounded Image" class="img-raised rounded-circle img-fluid">
-            </div>
-            <div class="col-sm-2 ml-auto">
-              <h4>Windows Server</h4>
-              <img src="./assets/logo/win.png" alt="Circle Image" class="img-raised rounded-circle img-fluid">
-            </div>
-            <div class="col-sm-2 ml-auto">
-              <h4>SQL Server</h4>
-              <img src="./assets/logo/sql.jpg" alt="Raised Image" class="img-raised rounded img-fluid">
-            </div>
-            <div class="col-sm-2 ml-auto">
-              <h4>Power BI</h4>
-              <img src="./assets/logo/pbi.png" alt="Thumbnail Image" class="img-raised rounded img-fluid">
-            </div>
-          </div>
-          <div class="row">
-          </div>
-        </div>
-        <!--                 end images	             -->
-        <div class="space-50"></div>
-      </div>
-    </div>
+    <hr>
+   
 
     
-
-    <div class="section section-download" id="downloadSection">
+    <!--  ENDING SECTION  -->
       <div class="container">
-
         <div class="sharing-area text-center">
-
           <div class="row justify-content-center">
-                <h3>Thank you for reading!</h3>
+              <h3>Thank you for reading!</h3>
               </div>
-
-              <a id="linkedin" href="https://www.linkedin.com/in/gabriel-melchisedec-hall-73825b58/" target="_blank" class="btn btn-raised btn-facebook" rel="nofollow">
-                <img src="./assets/ico/linkedin24w.png">
-                LinkedIn
-              </a>
-              <a id="github" href="https://github.com/gabrielhall2112" target="_blank" class="btn btn-raised btn-github" rel="nofollow">
-                <i class="fa fa-github"></i>
-                Star
-              </a>
-              <a id="twitter" class="btn btn-raised btn-twitter" href="./pages/social_media.html" rel="nofollow">
-                <i class="fa fa-twitter"></i>
-                Tweet
-              </a>
-              <a id="facebook" class="btn btn-raised btn-facebook" href="./pages/social_media.html" rel="nofollow">
-                <i class="fa fa-facebook-square"></i>
-                Facebook
-              </a>
-              <a id="instagram" class="btn btn-raised btn-instagram" href="./pages/social_media.html" rel="nofollow">
-                <i class="fa fa-instagram"></i>
-                Instagram
-              </a>
+                <a id="linkedin" href="https://www.linkedin.com/in/gabriel-melchisedec-hall-73825b58/" target="_blank" class="btn btn-raised btn-facebook" rel="nofollow">
+                  <img src="./assets/ico/linkedin24w.png">
+                  LinkedIn
+                </a>
+                <a id="github" href="https://github.com/gabrielhall2112" target="_blank" class="btn btn-raised btn-github" rel="nofollow">
+                  <i class="fa fa-github"></i>
+                  Star
+                </a>
+                <a id="twitter" class="btn btn-raised btn-twitter" href="./pages/social_media.html" rel="nofollow">
+                  <i class="fa fa-twitter"></i>
+                  Tweet
+                </a>
+                <a id="facebook" class="btn btn-raised btn-facebook" href="./pages/social_media.html" rel="nofollow">
+                  <i class="fa fa-facebook-square"></i>
+                  Facebook
+                </a>
+                <a id="instagram" class="btn btn-raised btn-instagram" href="./pages/social_media.html" rel="nofollow">
+                  <i class="fa fa-instagram"></i>
+                  Instagram
+                </a>
             </div>
+            <br><br><br>
       </div>
-    </div>
   </div>
   
+<!--  FOOTER SECTION  -->
+
   <footer class="footer" data-background-color="black">
     <div class="container">
       <nav class="float-left">
